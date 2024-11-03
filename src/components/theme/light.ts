@@ -24,4 +24,5 @@ export const light = {
   '--chart-3': '197 37% 24%',
   '--chart-4': '43 74% 66%',
   '--chart-5': '27 87% 67%',
+  '--logo': '221.2 83.2% 53.3%',
 } as const

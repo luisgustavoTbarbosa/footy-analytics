@@ -6,19 +6,38 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   max-width: 1250px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
+
+  figure svg {
+    path {
+      fill: hsl(${(props) => props.theme['--logo']});
+    }
+  }
 
   nav {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
     a {
       div {
-        width: 2.5rem;
+        width: 2.25rem;
         padding: 0.5rem 0;
-        transition: background-color 0.2s ease;
+        transition: all 0.2s ease;
+        border-radius: 6px;
 
-        img {
-          width: 1.5rem;
-          height: 1.5rem;
+        &:hover {
+          background-color: hsl(${(props) => props.theme['--accent']});
+        }
+
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
           margin: 0 auto;
+
+          path {
+            fill: hsl(${(props) => props.theme['--foreground']});
+          }
         }
       }
     }

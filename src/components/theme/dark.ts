@@ -23,4 +23,5 @@ export const dark = {
   '--chart-3': '30 80% 55%',
   '--chart-4': '280 65% 60%',
   '--chart-5': '340 75% 55%',
+  '--logo': '210 40% 96.1%',
 } as const
