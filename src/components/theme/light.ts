@@ -1,6 +1,6 @@
 export const light = {
   '--background': '0 0% 100%',
-  '--foreground': '222.2 84% 4.9%',
+  '--foreground': '#2563eb',
   '--card': '0 0% 100%',
   '--card-foreground': '222.2 84% 4.9%',
   '--popover': '0 0% 100%',
