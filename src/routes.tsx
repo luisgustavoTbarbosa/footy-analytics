@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from './pages/_layouts/app'
 import { LandingPage } from './pages/app/landing-page'
-import { Statistics } from './pages/app/statistics'
+import { Statistics } from './pages/app/statistic'
 
 export const router = createBrowserRouter([
   {
