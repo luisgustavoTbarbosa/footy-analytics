@@ -36,7 +36,7 @@ export const HeaderContainer = styled.header`
           margin: 0 auto;
 
           path {
-            fill: hsl(${(props) => props.theme['--foreground']});
+            fill: ${(props) => props.theme['--foreground']};
           }
         }
       }
