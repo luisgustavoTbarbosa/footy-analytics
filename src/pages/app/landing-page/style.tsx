@@ -10,6 +10,12 @@ export const LandingPageContainer = styled.main`
   height: calc(100vh - 52px);
   margin: 0 auto;
   padding: 0.5rem 2rem;
+
+  @media only screen and (max-width: 667px) {
+    justify-content: flex-start;
+    gap: 2.5rem;
+    padding-top: 3rem;
+  }
 `
 
 export const PresentationInfo = styled.div`
@@ -38,6 +44,16 @@ export const PresentationInfo = styled.div`
   figure {
     width: 55%;
   }
+
+  @media only screen and (max-width: 667px) {
+    flex-direction: column-reverse;
+    gap: 1rem;
+
+    figure {
+      width: auto;
+      max-width: 260px;
+    }
+  }
 `
 
 export const TopicInfos = styled.div`
@@ -57,6 +73,23 @@ export const TopicInfos = styled.div`
 
     p {
       margin-top: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 667px) {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+
+    div {
+      max-width: unset;
+      font-size: 0.8rem;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 `

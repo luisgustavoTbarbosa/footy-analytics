@@ -1,4 +1,5 @@
 import { ChartLine, EyeIcon, LogIn, TvMinimal } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 import banner from '@/assets/Banner.png'
 import { Button } from '@/components/ui/button'
@@ -15,12 +16,13 @@ export function LandingPage() {
             Uma plataforma completa de estatísticas para você entender cada
             lance, gol e vitória do seu time favorito.
           </p>
-          <Button>
-            Explorar
-            <LogIn />
-          </Button>
+          <Link to="/estatisticas">
+            <Button>
+              Explorar
+              <LogIn />
+            </Button>
+          </Link>
         </div>
-        <div></div>
         <figure>
           <img src={banner} alt="Landing page banner" />
         </figure>
