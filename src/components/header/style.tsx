@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
 
   figure svg {
     path {
-      fill: hsl(${(props) => props.theme['--logo']});
+      fill: ${(props) => props.theme['--logo']};
     }
   }
 
@@ -36,7 +36,7 @@ export const HeaderContainer = styled.header`
           margin: 0 auto;
 
           path {
-            fill: ${(props) => props.theme['--foreground']};
+            fill: hsl(${(props) => props.theme['--foreground']});
           }
         }
       }

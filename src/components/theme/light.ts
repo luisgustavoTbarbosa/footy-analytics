@@ -1,6 +1,6 @@
 export const light = {
   '--background': '0 0% 100%',
-  '--foreground': '#2563eb',
+  '--foreground': '222.2 84% 4.9%',
   '--card': '0 0% 100%',
   '--card-foreground': '222.2 84% 4.9%',
   '--popover': '0 0% 100%',
@@ -24,7 +24,7 @@ export const light = {
   '--chart-3': '197 37% 24%',
   '--chart-4': '43 74% 66%',
   '--chart-5': '27 87% 67%',
-  '--logo': '221.2 83.2% 53.3%',
+  '--logo': '#2563eb',
   '--topic-card-border': '214.3 31.8% 91.4%',
   '--shadow-sm': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
 } as const

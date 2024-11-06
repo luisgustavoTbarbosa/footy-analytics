@@ -1,6 +1,6 @@
 export const dark = {
   '--background': '222.2 84% 4.9%',
-  '--foreground': '#f1f5f9',
+  '--foreground': '210 40% 98%',
   '--card': '222.2 84% 4.9%',
   '--card-foreground': '210 40% 98%',
   '--popover': '222.2 84% 4.9%',
@@ -24,7 +24,7 @@ export const dark = {
   '--chart-3': '30 80% 55%',
   '--chart-4': '280 65% 60%',
   '--chart-5': '340 75% 55%',
-  '--logo': '210 40% 96.1%',
+  '--logo': '#f1f5f9',
   '--topic-card-border': '217.2 19.59% 30.41%',
   '--shadow-sm': '0 1px 2px 0 rgb(255 255 255 / 0.05)',
 } as const
