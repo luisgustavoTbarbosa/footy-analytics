@@ -24,7 +24,7 @@ function AppContent() {
 export default function App() {
   return (
     <HelmetProvider>
-      <ThemeProvider storageKey="footyanalytics-theme" defaultTheme="system">
+      <ThemeProvider storageKey="footyanalytics-theme" defaultTheme="light">
         <AppContent />
       </ThemeProvider>
     </HelmetProvider>

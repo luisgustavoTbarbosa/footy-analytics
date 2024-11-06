@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
 
   figure svg {
     path {
-      fill: ${(props) => props.theme['--logo']};
+      fill: hsl(${(props) => props.theme['--logo']});
     }
   }
 
