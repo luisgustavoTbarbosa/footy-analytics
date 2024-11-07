@@ -1,3 +1,4 @@
+import classNames from 'embla-carousel-class-names'
 import { TvMinimalPlay } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
@@ -27,9 +28,19 @@ export function Statistics() {
             <TvMinimalPlay />
             <p>Rolando agora</p>
           </div>
-          <Carousel>
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+              inViewThreshold: 0.8,
+              breakpoints: {
+                '(min-width: 1024px)': { align: 'center' },
+              },
+            }}
+            plugins={[classNames()]}
+          >
             <CarouselContent>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
                 <LiveMatchCard>
                   <div>
                     <img
@@ -69,7 +80,7 @@ export function Statistics() {
                   </div>
                 </LiveMatchCard>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
                 <LiveMatchCard>
                   <div>
                     <img
@@ -109,7 +120,7 @@ export function Statistics() {
                   </div>
                 </LiveMatchCard>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
                 <LiveMatchCard>
                   <div>
                     <img
@@ -149,7 +160,7 @@ export function Statistics() {
                   </div>
                 </LiveMatchCard>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
                 <LiveMatchCard>
                   <div>
                     <img
@@ -189,7 +200,7 @@ export function Statistics() {
                   </div>
                 </LiveMatchCard>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
                 <LiveMatchCard>
                   <div>
                     <img
@@ -229,7 +240,7 @@ export function Statistics() {
                   </div>
                 </LiveMatchCard>
               </CarouselItem>
-              <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
                 <LiveMatchCard>
                   <div>
                     <img
@@ -270,8 +281,8 @@ export function Statistics() {
                 </LiveMatchCard>
               </CarouselItem>
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="left-1 hidden bg-primary text-primary-foreground lg:inline-flex" />
+            <CarouselNext className="right-1 hidden bg-primary text-primary-foreground lg:inline-flex" />
           </Carousel>
         </LiveMatchesContainer>
 

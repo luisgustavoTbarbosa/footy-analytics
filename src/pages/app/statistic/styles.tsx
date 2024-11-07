@@ -17,6 +17,10 @@ export const LiveMatchesContainer = styled.div`
     font-size: 1.25rem;
     font-weight: 500;
   }
+
+  .carousel-item:not(.is-in-view) {
+    opacity: 0.4;
+  }
 `
 
 export const LiveMatchCard = styled.div`
