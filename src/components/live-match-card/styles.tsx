@@ -25,7 +25,6 @@ export const LiveMatchCardContainer = styled.div`
     span {
       font-size: 0.875rem;
       color: hsl(${(props) => props.theme['--muted-foreground']});
-      text-transform: capitalize;
     }
   }
 
