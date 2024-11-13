@@ -15,7 +15,6 @@ export const LiveMatchesContainer = styled.div`
     gap: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
-    font-weight: 500;
   }
 
   .carousel-item:not(.is-in-view) {
@@ -25,6 +24,7 @@ export const LiveMatchesContainer = styled.div`
 
 export const ChampionshipDetails = styled.div`
   display: flex;
+  gap: 1.875rem;
 
   > div form {
     display: flex;
@@ -85,5 +85,37 @@ export const TeamPosition = styled.div`
 
   img {
     width: 1.5rem;
+  }
+`
+
+export const BestInLeagueContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  > p {
+    font-size: 1.25rem;
+  }
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+`
+
+export const BestTeamCard = styled.div`
+  > div:first-child {
+    display: flex;
+    gap: 0.5rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    span {
+      font-size: 0.875rem;
+      color: hsl(${(props) => props.theme['--muted-foreground']});
+    }
   }
 `
