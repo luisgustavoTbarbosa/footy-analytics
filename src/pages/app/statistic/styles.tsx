@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StatisticContainer = styled.main`
   max-width: 1250px;
   margin: 0 auto;
-  padding: 3rem 2rem 0.5rem;
+  padding: 3rem 2rem;
 `
 
 export const LiveMatchesContainer = styled.div`
@@ -24,26 +24,45 @@ export const LiveMatchesContainer = styled.div`
 
 export const ChampionshipDetails = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 1.875rem;
 
-  > div form {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-
-    div {
-      display: flex;
-      gap: 0.75rem;
+  > div {
+    &:first-child {
+      flex: 1;
     }
 
-    .refresh-button {
-      width: 2.25rem;
-      height: 2.25rem;
-      padding: 0;
+    &:last-child {
+      width: 50%;
+    }
 
-      svg {
-        width: 1.125rem;
-        height: 1.125rem;
+    form {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      div {
+        display: flex;
+        gap: 0.75rem;
+      }
+
+      .refresh-button {
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0;
+
+        svg {
+          width: 1.125rem;
+          height: 1.125rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1050px) {
+    > div {
+      &:last-child {
+        width: 100%;
       }
     }
   }
@@ -89,24 +108,35 @@ export const TeamPosition = styled.div`
 `
 
 export const BestInLeagueContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
   > p {
+    height: 2.25rem;
+    margin-bottom: 0.5rem;
     font-size: 1.25rem;
   }
 
   > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 958px) {
+    > div {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 `
 
 export const BestTeamCard = styled.div`
+  padding: 1rem;
+  border: 1px solid hsl(${(props) => props.theme['--border']});
+  border-radius: ${(props) => props.theme['--radius']};
+  box-shadow: ${(props) => props.theme['--shadow-sm']};
+
   > div:first-child {
     display: flex;
     gap: 0.5rem;
+    margin-bottom: 0.625rem;
 
     img {
       width: 3rem;
@@ -114,8 +144,38 @@ export const BestTeamCard = styled.div`
     }
 
     span {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
       font-size: 0.875rem;
       color: hsl(${(props) => props.theme['--muted-foreground']});
+    }
+  }
+
+  > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: ${(props) => props.theme['--radius']};
+    background-color: hsl(${(props) => props.theme['--muted']});
+
+    p {
+      display: flex;
+      flex-wrap: nowrap;
+      font-size: 0.875rem;
+      color: hsl(${(props) => props.theme['--muted-foreground']});
+
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+
+    p:first-child {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: hsl(${(props) => props.theme['--card-foreground']});
     }
   }
 `
