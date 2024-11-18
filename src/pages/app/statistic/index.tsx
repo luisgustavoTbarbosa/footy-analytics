@@ -131,14 +131,14 @@ export function Statistics() {
                 <TableHeader>
                   <TableRow>
                     <TableHead className="w-full min-w-[150px]"></TableHead>
-                    <TableHead>GP</TableHead>
-                    <TableHead>W</TableHead>
-                    <TableHead>D</TableHead>
-                    <TableHead>L</TableHead>
-                    <TableHead>GF</TableHead>
-                    <TableHead>GA</TableHead>
-                    <TableHead>GD</TableHead>
-                    <TableHead>PTS</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">GP</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">W</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">D</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">L</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">GF</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">GA</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">GD</TableHead>
+                    <TableHead className="px-1 text-xs md:px-2">PTS</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -153,154 +153,14 @@ export function Statistics() {
                         Santos
                       </TeamPosition>
                     </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        2
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        3
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        4
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        5
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        6
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        7
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <TeamPosition>
-                        8
-                        <img
-                          src="https://ssl.gstatic.com/onebox/media/sports/logos/4w2Z97Hf9CSOqICK3a8AxQ_96x96.png"
-                          alt=""
-                        />
-                        Santos
-                      </TeamPosition>
-                    </TableCell>
-                    <TableCell>15</TableCell>
-                    <TableCell>11</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>2</TableCell>
-                    <TableCell>40</TableCell>
-                    <TableCell>12</TableCell>
-                    <TableCell>28</TableCell>
-                    <TableCell>35</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">15</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">11</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">2</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">2</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">40</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">12</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">28</TableCell>
+                    <TableCell className="px-1 text-xs md:px-2">35</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

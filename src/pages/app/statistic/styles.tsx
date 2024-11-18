@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StatisticContainer = styled.main`
   max-width: 1250px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
 `
 
 export const LiveMatchesContainer = styled.div`
@@ -57,6 +57,17 @@ export const ChampionshipDetails = styled.div`
         }
       }
     }
+
+    @media (max-width: 640px) {
+      form {
+        align-items: flex-end;
+
+        div {
+          flex-direction: column-reverse;
+          gap: 0.5rem;
+        }
+      }
+    }
   }
 
   @media (max-width: 1050px) {
@@ -73,6 +84,10 @@ export const ChampionshipTable = styled.div`
   border: 1px solid hsl(${(props) => props.theme['--border']});
   border-radius: ${(props) => props.theme['--radius']};
   box-shadow: ${(props) => props.theme['--shadow-sm']};
+
+  @media (max-width: 640px) {
+    padding: 0.5rem;
+  }
 `
 
 export const ChampionshipTableHeader = styled.div`
@@ -94,6 +109,17 @@ export const ChampionshipTableHeader = styled.div`
     font-size: 0.875rem;
     color: hsl(${(props) => props.theme['--muted-foreground']});
   }
+
+  @media (max-width: 640px) {
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 `
 
 export const TeamPosition = styled.div`
@@ -104,6 +130,14 @@ export const TeamPosition = styled.div`
 
   img {
     width: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 0.75rem;
+
+    img {
+      width: 1.2rem;
+    }
   }
 `
 
@@ -120,9 +154,11 @@ export const BestInLeagueContainer = styled.div`
     gap: 0.75rem;
   }
 
-  @media (max-width: 958px) {
+  @media (max-width: 640px) {
     > div {
-      grid-template-columns: repeat(4, 1fr);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
     }
   }
 `
@@ -176,6 +212,23 @@ export const BestTeamCard = styled.div`
       margin-bottom: 0.5rem;
       font-size: 1rem;
       color: hsl(${(props) => props.theme['--card-foreground']});
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 0.5rem;
+
+    > div:first-child {
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    > div:last-child {
+      p {
+        font-size: 0.75rem;
+      }
     }
   }
 `

@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   max-width: 1250px;
   margin: 0 auto;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 
   figure svg {
     path {
