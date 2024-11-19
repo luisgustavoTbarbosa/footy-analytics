@@ -1,7 +1,9 @@
+import { useQuery } from '@tanstack/react-query'
 import classNames from 'embla-carousel-class-names'
 import { RefreshCcw, TvMinimalPlay } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
+import { getMatches } from '@/api/get-matches'
 import { LiveMatchCard } from '@/components/live-match-card'
 import { Button } from '@/components/ui/button'
 import {
@@ -39,6 +41,13 @@ import {
 } from './styles'
 
 export function Statistics() {
+  const { data: matches } = useQuery({
+    queryKey: ['matches'],
+    queryFn: getMatches,
+  })
+
+  console.log('matches', matches)
+
   return (
     <>
       <Helmet title="Estatística" />
