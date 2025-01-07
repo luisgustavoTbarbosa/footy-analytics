@@ -16,7 +16,9 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
@@ -41,6 +43,49 @@ import {
 } from './styles'
 
 export function Statistics() {
+  const topLeagues = [
+    {
+      leagueId: 33973,
+      name: 'Premier League - Inglaterra',
+    },
+    {
+      leagueId: 52695,
+      name: 'Ligue 1 - França',
+    },
+    {
+      leagueId: 61205,
+      name: 'Serie A - Brasil',
+    },
+    {
+      leagueId: 67162,
+      name: 'Bundesliga - Alemanha',
+    },
+    {
+      leagueId: 75672,
+      name: 'Eredivisie - Holanda',
+    },
+    {
+      leagueId: 80778,
+      name: 'Primeira Liga - Portugal',
+    },
+    {
+      leagueId: 84182,
+      name: 'J1 League - Japão',
+    },
+    {
+      leagueId: 94394,
+      name: 'Premier League - País de Gales',
+    },
+    {
+      leagueId: 99500,
+      name: 'Premier League - Bielorrússia',
+    },
+    {
+      leagueId: 2486,
+      name: 'UEFA Champions League',
+    },
+  ]
+
   const { data: matches } = useQuery({
     queryKey: ['matches'],
     queryFn: getMatches,
@@ -97,15 +142,24 @@ export function Statistics() {
           <div>
             <form action="">
               <div>
-                <Select defaultValue="Campeonato Brasileiro">
+                <Select defaultValue="61205">
                   <SelectTrigger className="w-[200px]">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Campeonato Brasileiro">
-                      Campeonato Brasileiro
-                    </SelectItem>
-                    <SelectItem value="Laliga">Laliga</SelectItem>
+                    <SelectGroup>
+                      <SelectLabel>Ligas</SelectLabel>
+                      {topLeagues.map((league) => {
+                        return (
+                          <SelectItem
+                            key={league.leagueId}
+                            value={league.leagueId.toString()}
+                          >
+                            {league.name}
+                          </SelectItem>
+                        )
+                      })}
+                    </SelectGroup>
                   </SelectContent>
                 </Select>
 
