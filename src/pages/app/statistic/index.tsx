@@ -1,11 +1,9 @@
-import { useQuery } from '@tanstack/react-query'
 import classNames from 'embla-carousel-class-names'
-import { RefreshCcw, TvMinimalPlay } from 'lucide-react'
+import { TvMinimalPlay } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 
-import { getMatches } from '@/api/get-matches'
+import { LeagueFilter } from '@/components/leagueFilter'
 import { LiveMatchCard } from '@/components/live-match-card'
-import { Button } from '@/components/ui/button'
 import {
   Carousel,
   CarouselContent,
@@ -13,15 +11,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import {
   Table,
   TableBody,
@@ -43,55 +32,11 @@ import {
 } from './styles'
 
 export function Statistics() {
-  const topLeagues = [
-    {
-      leagueId: 33973,
-      name: 'Premier League - Inglaterra',
-    },
-    {
-      leagueId: 52695,
-      name: 'Ligue 1 - França',
-    },
-    {
-      leagueId: 61205,
-      name: 'Serie A - Brasil',
-    },
-    {
-      leagueId: 67162,
-      name: 'Bundesliga - Alemanha',
-    },
-    {
-      leagueId: 75672,
-      name: 'Eredivisie - Holanda',
-    },
-    {
-      leagueId: 80778,
-      name: 'Primeira Liga - Portugal',
-    },
-    {
-      leagueId: 84182,
-      name: 'J1 League - Japão',
-    },
-    {
-      leagueId: 94394,
-      name: 'Premier League - País de Gales',
-    },
-    {
-      leagueId: 99500,
-      name: 'Premier League - Bielorrússia',
-    },
-    {
-      leagueId: 2486,
-      name: 'UEFA Champions League',
-    },
-  ]
-
-  const { data: matches } = useQuery({
-    queryKey: ['matches'],
-    queryFn: getMatches,
-  })
-
-  console.log('matches', matches)
+  // const { data: matches } = useQuery({
+  //   queryKey: ['matches'],
+  //   queryFn: getMatches,
+  // })
+  // console.log('matches', matches)
 
   return (
     <>
@@ -140,45 +85,7 @@ export function Statistics() {
 
         <ChampionshipDetails>
           <div>
-            <form action="">
-              <div>
-                <Select defaultValue="61205">
-                  <SelectTrigger className="w-[200px]">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel>Ligas</SelectLabel>
-                      {topLeagues.map((league) => {
-                        return (
-                          <SelectItem
-                            key={league.leagueId}
-                            value={league.leagueId.toString()}
-                          >
-                            {league.name}
-                          </SelectItem>
-                        )
-                      })}
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-
-                <Select defaultValue="2024">
-                  <SelectTrigger className="w-[100px]">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="2024">2024</SelectItem>
-                    <SelectItem value="2023">2023</SelectItem>
-                    <SelectItem value="2022">2022</SelectItem>
-                    <SelectItem value="2021">2021</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button type="button" className="refresh-button">
-                <RefreshCcw />
-              </Button>
-            </form>
+            <LeagueFilter />
             <ChampionshipTable>
               <ChampionshipTableHeader>
                 <img
