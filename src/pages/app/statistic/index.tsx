@@ -1,7 +1,10 @@
+import { useQuery } from '@tanstack/react-query'
 import classNames from 'embla-carousel-class-names'
 import { TvMinimalPlay } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
+import { useSearchParams } from 'react-router-dom'
 
+import { getMatches } from '@/api/get-matches'
 import { LeagueFilter } from '@/components/leagueFilter'
 import { LiveMatchCard } from '@/components/live-match-card'
 import {
@@ -32,11 +35,16 @@ import {
 } from './styles'
 
 export function Statistics() {
-  // const { data: matches } = useQuery({
-  //   queryKey: ['matches'],
-  //   queryFn: getMatches,
-  // })
-  // console.log('matches', matches)
+  const [searchParams] = useSearchParams()
+
+  const league = searchParams.get('league')
+  const year = searchParams.get('year')
+
+  const { data: matches } = useQuery({
+    queryKey: ['matches', league, year],
+    queryFn: getMatches,
+  })
+  console.log('matches', matches)
 
   return (
     <>

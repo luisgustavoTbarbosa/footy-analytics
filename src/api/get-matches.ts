@@ -1,9 +1,11 @@
 import { api } from '@/lib/axios'
 
-export async function getMatches() {
+export async function getMatches({ queryKey }) {
+  const league = queryKey[1]
   const response = await api.get('/matches', {
     params: {
-      date: '2024-11-19',
+      leagueId: Number(league),
+      date: new Date().toISOString().split('T')[0],
     },
   })
 

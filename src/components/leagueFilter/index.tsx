@@ -1,6 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { RefreshCcw } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { useSearchParams } from 'react-router-dom'
 import { z } from 'zod'
 
 import { Button } from '../ui/button'
@@ -22,6 +23,8 @@ const leagueFilterSchema = z.object({
 type LeagueFilterSchema = z.infer<typeof leagueFilterSchema>
 
 export function LeagueFilter() {
+  const [searchParams, setSearchParams] = useSearchParams()
+
   const topLeagues = [
     {
       leagueId: 33973,
@@ -69,8 +72,24 @@ export function LeagueFilter() {
     resolver: zodResolver(leagueFilterSchema),
   })
 
-  function handleLeagueFilter(data: LeagueFilterSchema) {
-    console.log(data)
+  function handleLeagueFilter({ league, year }: LeagueFilterSchema) {
+    setSearchParams((state) => {
+      if (league) {
+        state.set('league', league)
+      } else {
+        state.delete('league')
+      }
+      return state
+    })
+
+    setSearchParams((state) => {
+      if (year) {
+        state.set('year', year)
+      } else {
+        state.delete('year')
+      }
+      return state
+    })
   }
 
   return (
