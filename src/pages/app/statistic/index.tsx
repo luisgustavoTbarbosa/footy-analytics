@@ -67,24 +67,17 @@ export function Statistics() {
             plugins={[classNames()]}
           >
             <CarouselContent>
-              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
-                <LiveMatchCard />
-              </CarouselItem>
-              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
-                <LiveMatchCard />
-              </CarouselItem>
-              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
-                <LiveMatchCard />
-              </CarouselItem>
-              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
-                <LiveMatchCard />
-              </CarouselItem>
-              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
-                <LiveMatchCard />
-              </CarouselItem>
-              <CarouselItem className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4">
-                <LiveMatchCard />
-              </CarouselItem>
+              {matches &&
+                matches?.data.map((match) => {
+                  return (
+                    <CarouselItem
+                      key={match.id}
+                      className="carousel-item basis-2/3 md:basis-2/5 lg:basis-1/4"
+                    >
+                      <LiveMatchCard matchData={match} />
+                    </CarouselItem>
+                  )
+                })}
             </CarouselContent>
             <CarouselPrevious className="left-1 hidden bg-primary text-primary-foreground lg:inline-flex" />
             <CarouselNext className="right-1 hidden bg-primary text-primary-foreground lg:inline-flex" />
